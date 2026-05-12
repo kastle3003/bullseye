@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.E.T.A Hospitality Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#d4af37;
+--dark:#0b0b0b;
+--card:#151515;
+--muted:#b8b8b8;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0b0b0b;
+color:#fff;
+overflow-x:hidden;
+line-height:1.7;
+}
+
+h1,h2,h3,h4{
+font-family:'Cormorant Garamond',serif;
+font-weight:700;
+line-height:1;
+}
+
+.container{
+width:min(92%,1250px);
+margin:auto;
+}
+
+section{
+padding:110px 0;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 0;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:52px;
+height:52px;
+object-fit:contain;
+}
+
+.logo h2{
+font-size:30px;
+color:var(--gold);
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+font-size:15px;
+color:#ddd;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+padding:0;
+}
+
+.hero video{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(to right, rgba(0,0,0,0.93), rgba(0,0,0,0.45));
+z-index:-1;
+}
+
+.hero-content{
+max-width:700px;
+padding-top:70px;
+}
+
+.hero-tag{
+display:inline-flex;
+padding:10px 18px;
+border-radius:50px;
+border:1px solid rgba(212,175,55,.3);
+background:rgba(212,175,55,.08);
+color:var(--gold);
+font-size:13px;
+margin-bottom:28px;
+}
+
+.hero h1{
+font-size:clamp(52px,8vw,96px);
+margin-bottom:24px;
+}
+
+.hero h1 span{
+color:var(--gold);
+}
+
+.hero p{
+font-size:18px;
+color:#ddd;
+max-width:620px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-flex;
+padding:15px 32px;
+border-radius:50px;
+background:var(--gold);
+color:#000;
+font-weight:600;
+}
+
+/* TITLES */
+
+.section-title{
+margin-bottom:70px;
+}
+
+.section-title span{
+display:block;
+font-size:13px;
+letter-spacing:4px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.section-title h2{
+font-size:clamp(42px,6vw,72px);
+margin-bottom:18px;
+}
+
+.section-title p{
+max-width:720px;
+color:var(--muted);
+font-size:17px;
+line-height:1.9;
+}
+
+/* ABOUT */
+
+.about-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.about-image{
+position:relative;
+}
+
+.about-image img{
+height:680px;
+width:100%;
+object-fit:cover;
+border-radius:30px;
+}
+
+.exp-badge{
+position:absolute;
+left:25px;
+bottom:25px;
+background:var(--gold);
+color:#000;
+padding:22px 26px;
+border-radius:18px;
+font-weight:700;
+font-size:20px;
+}
+
+.about-content h3{
+font-size:58px;
+margin-bottom:24px;
+}
+
+.about-content p{
+color:#c8c8c8;
+margin-bottom:20px;
+font-size:17px;
+}
+
+.about-features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin-top:35px;
+}
+
+.feature-box{
+padding:18px 20px;
+background:#151515;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.06);
+}
+
+/* WHY CHOOSE US PARALLAX */
+
+.parallax-section{
+background:linear-gradient(to bottom,#0f0f0f,#080808);
+}
+
+.parallax-layout{
+display:flex;
+flex-direction:column;
+gap:140px;
+}
+
+.parallax-card{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.parallax-card.reverse{
+direction:rtl;
+}
+
+.parallax-card.reverse .parallax-content,
+.parallax-card.reverse .parallax-image{
+direction:ltr;
+}
+
+.parallax-image{
+position:relative;
+height:620px;
+border-radius:36px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,0.4);
+}
+
+.parallax-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.image-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+}
+
+.floating-label{
+position:absolute;
+left:30px;
+bottom:30px;
+padding:16px 24px;
+background:rgba(212,175,55,0.95);
+color:#000;
+font-weight:700;
+border-radius:50px;
+}
+
+.small-tag{
+display:inline-block;
+padding:10px 18px;
+border-radius:50px;
+background:rgba(212,175,55,0.1);
+border:1px solid rgba(212,175,55,0.25);
+color:var(--gold);
+font-size:13px;
+margin-bottom:24px;
+}
+
+.parallax-content h3{
+font-size:64px;
+margin-bottom:26px;
+}
+
+.parallax-content p{
+font-size:17px;
+line-height:1.9;
+color:var(--muted);
+margin-bottom:22px;
+}
+
+.feature-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+margin-top:35px;
+}
+
+.feature-item{
+display:flex;
+align-items:flex-start;
+gap:16px;
+padding:18px 22px;
+background:#141414;
+border-radius:22px;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.feature-icon{
+min-width:56px;
+height:56px;
+border-radius:18px;
+background:rgba(212,175,55,0.12);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+}
+
+.feature-text h4{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.feature-text p{
+margin:0;
+font-size:15px;
+}
+
+/* DIFFERENT */
+
+.difference-clean{
+background:linear-gradient(to bottom,#0d0d0d,#080808);
+}
+
+.center-title{
+text-align:center;
+max-width:900px;
+margin:auto auto 70px;
+}
+
+.center-title p{
+margin:auto;
+}
+
+.difference-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:26px;
+}
+
+.diff-box{
+background:#141414;
+border-radius:30px;
+padding:38px 30px;
+border:1px solid rgba(255,255,255,0.06);
+min-height:320px;
+}
+
+.diff-box::before{
+content:'';
+display:block;
+width:100%;
+height:5px;
+background:#d4af37;
+margin:-38px -30px 28px;
+width:calc(100% + 60px);
+}
+
+.diff-icon{
+width:72px;
+height:72px;
+border-radius:22px;
+background:rgba(212,175,55,0.12);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+margin-bottom:24px;
+}
+
+.diff-box h3{
+font-size:34px;
+margin-bottom:18px;
+}
+
+.diff-box p{
+font-size:15px;
+line-height:1.9;
+color:#b8b8b8;
+}
+
+/* JOIN */
+
+.join-layout{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:26px;
+}
+
+.join-card{
+padding:40px;
+border-radius:28px;
+background:#131313;
+position:relative;
+}
+
+.join-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:var(--gold);
+}
+
+.join-card h3{
+font-size:42px;
+margin-bottom:16px;
+color:var(--gold);
+}
+
+.join-card p{
+color:var(--muted);
+}
+
+/* GALLERY */
+
+.gallery-track{
+display:flex;
+gap:22px;
+width:max-content;
+animation:marquee 35s linear infinite;
+}
+
+.gallery-wrap{
+overflow:hidden;
+}
+
+.gallery-track img{
+width:320px;
+height:230px;
+object-fit:cover;
+border-radius:24px;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* REELS */
+
+.reels-scroll{
+display:flex;
+gap:24px;
+overflow-x:auto;
+padding-bottom:15px;
+scrollbar-width:none;
+}
+
+.reel-card{
+min-width:300px;
+background:#151515;
+border-radius:28px;
+overflow:hidden;
+}
+
+.reel-card video{
+width:100%;
+height:520px;
+object-fit:cover;
+}
+
+.reel-content{
+padding:24px;
+}
+
+.reel-tag{
+display:inline-block;
+padding:8px 14px;
+border-radius:50px;
+background:var(--gold);
+color:#000;
+font-size:12px;
+font-weight:700;
+margin-bottom:16px;
+}
+
+.reel-content h3{
+font-size:34px;
+margin-bottom:12px;
+}
+
+.reel-content p{
+color:var(--muted);
+}
+
+/* FOOTER */
+
+footer{
+background:#050505;
+padding:90px 0 30px;
+border-top:1px solid rgba(255,255,255,.06);
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.2fr;
+gap:50px;
+margin-bottom:50px;
+}
+
+.footer-logo{
+display:flex;
+align-items:center;
+gap:14px;
+margin-bottom:20px;
+}
+
+.footer-logo img{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+.footer-logo h2{
+font-size:36px;
+color:var(--gold);
+}
+
+.footer-text,
+.footer-links a,
+.contact-info{
+color:var(--muted);
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.footer-heading{
+font-size:26px;
+margin-bottom:18px;
+}
+
+.contact-info{
+display:grid;
+gap:16px;
+}
+
+.bottom-footer{
+padding-top:28px;
+border-top:1px solid rgba(255,255,255,.06);
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.socials{
+display:flex;
+gap:12px;
+}
+
+.socials a{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#151515;
+border-radius:50%;
+color:var(--gold);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.difference-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:991px){
+
+.hero{
+height:auto;
+padding:150px 0 100px;
+}
+
+.nav-links{
+display:none;
+}
+
+.about-layout,
+.parallax-card,
+.join-layout,
+.footer-grid{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+.parallax-card.reverse{
+direction:ltr;
+}
+
+.about-image img,
+.parallax-image{
+height:500px;
+}
+
+}
+
+@media(max-width:600px){
+
+section{
+padding:90px 0;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.about-features,
+.difference-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-track img{
+width:240px;
+height:180px;
+}
+
+.reel-card{
+min-width:260px;
+}
+
+.reel-card video{
+height:420px;
+}
+
+.parallax-content h3,
+.about-content h3{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">
+<img src="logo.png" alt="logo">
+<h2>B.E.T.A</h2>
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Why Us</a>
+<a href="#">Gallery</a>
+<a href="#">Reels</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+<source src="hero-video.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+Luxury Hospitality & Cruise Training
+</div>
+
+<h1>
+Focus Is The<br>
+<span>Key To Success</span>
+</h1>
+
+<p>
+At BETA we believe that education should be more than just theory. It should be a bridge to a career and meaningful living through practical hospitality learning.
+</p>
+
+<a href="#" class="btn">Explore Academy</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>WHO WE ARE</span>
+<h2>Professionals With Real Industry Experience</h2>
+<p>
+We are hospitality professionals with over 15 years of experience in luxury hotels, restaurants and international cruise lines.
+</p>
+</div>
+
+<div class="about-layout">
+
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop">
+<div class="exp-badge">15+ Years Experience</div>
+</div>
+
+<div class="about-content">
+
+<h3>Bulls Eye Training Academy</h3>
+
+<p>
+We have worked in 5-star hotels and international cruise lines in the capacity of Bar Managers and Restaurant Managers.
+</p>
+
+<p>
+We have also ventured into catering and bar-events through our experience and would love to share the same expertise with our students.
+</p>
+
+<div class="about-features">
+<div class="feature-box">Luxury Hospitality Training</div>
+<div class="feature-box">Cruise Line Exposure</div>
+<div class="feature-box">Career Focused Learning</div>
+<div class="feature-box">Hands-On Mentorship</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="parallax-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>WHY CHOOSE US</span>
+
+<h2>Industry Focused Hospitality Learning</h2>
+
+<p>
+Built around practical exposure, luxury hospitality standards and career-first learning experiences.
+</p>
+
+</div>
+
+<div class="parallax-layout">
+
+<div class="parallax-card">
+
+<div class="parallax-content">
+
+<div class="small-tag">INDUSTRY LED CURRICULUM</div>
+
+<h3>Learn What The Industry Actually Uses</h3>
+
+<p>
+Our curriculum is designed around modern luxury hospitality standards instead of outdated classroom theory.
+</p>
+
+<div class="feature-list">
+
+<div class="feature-item">
+<div class="feature-icon">🍷</div>
+<div class="feature-text">
+<h4>Luxury Standards</h4>
+<p>Learn workflows used in premium hotels and restaurants.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">🎯</div>
+<div class="feature-text">
+<h4>Practical Exposure</h4>
+<p>Real hospitality systems from day one of training.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="parallax-image">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1974&auto=format&fit=crop">
+
+<div class="image-overlay"></div>
+
+<div class="floating-label">Modern Hospitality Training</div>
+
+</div>
+
+</div>
+
+<div class="parallax-card reverse">
+
+<div class="parallax-content">
+
+<div class="small-tag">HANDS ON MENTORSHIP</div>
+
+<h3>Guidance From Real Hospitality Professionals</h3>
+
+<p>
+Learn directly from mentors with experience in luxury hotels and international cruise lines.
+</p>
+
+<div class="feature-list">
+
+<div class="feature-item">
+<div class="feature-icon">🌍</div>
+<div class="feature-text">
+<h4>International Exposure</h4>
+<p>Understand cruise hospitality and overseas guest interaction.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">🧠</div>
+<div class="feature-text">
+<h4>Personal Mentorship</h4>
+<p>Personalized feedback and hospitality confidence building.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="parallax-image">
+
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop">
+
+<div class="image-overlay"></div>
+
+<div class="floating-label">Global Hospitality Exposure</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="difference-clean">
+
+<div class="container">
+
+<div class="section-title center-title">
+
+<span>HOW WE ARE DIFFERENT</span>
+
+<h2>Why Students Choose B.E.T.A</h2>
+
+<p>
+Practical hospitality learning designed for real-world exposure, confidence and faster career growth.
+</p>
+
+</div>
+
+<div class="difference-grid">
+
+<div class="diff-box">
+<div class="diff-icon">🎯</div>
+<h3>80% Practical Learning</h3>
+<p>80% practical and 20% theory focused hospitality training.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">🔥</div>
+<h3>Hands On From Day One</h3>
+<p>Students begin learning real hospitality workflows immediately.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">🚀</div>
+<h3>Fast Entry Jobs</h3>
+<p>Quick hospitality learning for faster employment opportunities.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">🗣️</div>
+<h3>Confidence Building</h3>
+<p>Interview answering practice and confidence development.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">💼</div>
+<h3>Work While Learning</h3>
+<p>Guidance for hospitality gigs and flexible earning opportunities.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">🌍</div>
+<h3>Cruise Exposure</h3>
+<p>Cruise line hospitality exposure and international communication.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">📞</div>
+<h3>Telephonic Conversation</h3>
+<p>Overseas communication and interview practice support.</p>
+</div>
+
+<div class="diff-box">
+<div class="diff-icon">🇮🇹</div>
+<h3>Italian Language Basics</h3>
+<p>Working knowledge and basics of Italian hospitality communication.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>WHO SHOULD JOIN</span>
+<h2>Built For Ambitious Learners</h2>
+</div>
+
+<div class="join-layout">
+
+<div class="join-card">
+<h3>SSC & 12th Students</h3>
+<p>Students looking for quick practical hospitality learning and progressive career opportunities.</p>
+</div>
+
+<div class="join-card">
+<h3>Career Switchers</h3>
+<p>People looking for active people-facing work and fast growth opportunities.</p>
+</div>
+
+<div class="join-card">
+<h3>Part Timers & Freelancers</h3>
+<p>Professionals looking for hospitality events, gigs and flexible opportunities.</p>
+</div>
+
+<div class="join-card">
+<h3>Future Entrepreneurs</h3>
+<p>Students interested in hospitality businesses and future event ventures.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>GALLERY</span>
+<h2>Hospitality Moments</h2>
+<p>A glimpse into luxury hospitality learning and training experiences.</p>
+</div>
+
+</div>
+
+<div class="gallery-wrap">
+
+<div class="gallery-track">
+
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>TRAINING REELS</span>
+<h2>Hospitality Reels</h2>
+<p>Explore luxury service standards and hospitality training through immersive short-form content.</p>
+</div>
+
+<div class="reels-scroll">
+
+<div class="reel-card">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-bartender-preparing-drinks-1561267681535?download=1080p" type="video/mp4">
+</video>
+<div class="reel-content">
+<div class="reel-tag">Bartending</div>
+<h3>Luxury Cocktail Workflow</h3>
+<p>Professional cocktail preparation and premium bar presentation techniques.</p>
+</div>
+</div>
+
+<div class="reel-card">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-waiter-serving-food-1567596323412?download=1080p" type="video/mp4">
+</video>
+<div class="reel-content">
+<div class="reel-tag">Fine Dining</div>
+<h3>Restaurant Service</h3>
+<p>Luxury dining etiquette and guest interaction standards.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+<img src="logo.png" alt="logo">
+<h2>B.E.T.A</h2>
+</div>
+
+<p class="footer-text">
+Premium hospitality learning designed for aspiring professionals looking to build successful careers in hotels, restaurants and international cruise lines.
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-heading">Quick Links</h3>
+
+<div class="footer-links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Gallery</a>
+<a href="#">Reels</a>
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-heading">Programs</h3>
+
+<div class="footer-links">
+<a href="#">Bartending</a>
+<a href="#">Luxury Service</a>
+<a href="#">Cruise Training</a>
+<a href="#">Restaurant Operations</a>
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-heading">Contact</h3>
+
+<div class="contact-info">
+<div>Goa, India</div>
+<div>+91 98765 43210</div>
+<div>info@betahospitality.com</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="bottom-footer">
+
+<div style="color:#777;">
+© 2026 Bulls Eye Training Academy • All Rights Reserved
+</div>
+
+<div class="socials">
+<a href="#">f</a>
+<a href="#">in</a>
+<a href="#">ig</a>
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
